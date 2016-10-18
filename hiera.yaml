@@ -1,0 +1,16 @@
+---
+:backends:
+  - yaml
+
+:yaml:
+  :datadir: /etc/puppet/hieradb
+
+:hierarchy:
+  - "nodes/%{fqdn}"
+  - "virtual/%{virtual}"
+  - "osfamily/%{osfamily}"
+  - common
+
+:logger: console
+
+:merge_behavior: deeper
